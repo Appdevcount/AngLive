@@ -1,0 +1,4 @@
+ng new AngularCrud --skip-tests true 
+
+ng g c employees/listEmployees --spec false --flat true
+

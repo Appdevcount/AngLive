@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 // import Employee Model
 import { Employee } from '../../models/employee.model';
 
-// Jquery reference 
-import * as $ from 'jquery';
+// // Jquery reference
+// // import * as $ from 'jquery';
 
 @Component({
   selector: 'app-list-employees',
@@ -22,7 +22,8 @@ export class ListEmployeesComponent implements OnInit {
       department: 'IT',
       isActive: true,
       // photoPath: '../../../../emp/assets/images/mark.png'
-      photoPath: '../../../../assets/images/mark.png'
+      // photoPath: '../../../../assets/images/mark.png'
+      photoPath: 'assets/images/mark.png'
     },
     {
       id: 2,
@@ -33,7 +34,8 @@ export class ListEmployeesComponent implements OnInit {
       dateOfBirth: new Date('11/20/1979'),
       department: 'HR',
       isActive: true,
-      photoPath: '../ASPNETAng6/a6/a6spa1/src/assets/images/mary.png'
+      // photoPath: '../ASPNETAng6/a6/a6spa1/src/assets/images/mary.png'
+      photoPath: 'assets/images/mary.png'
     },
     {
       id: 3,
@@ -44,21 +46,20 @@ export class ListEmployeesComponent implements OnInit {
       dateOfBirth: new Date('3/25/1976'),
       department: 'IT',
       isActive: false,
-      photoPath: '../../a6/a6spa1/src/assets/images/john.png'
+      // photoPath: '../../a6/a6spa1/src/assets/images/john.png'
+      photoPath: 'assets/images/john.png'
     },
   ];
   constructor() { }
 
   ngOnInit() {
-    $(document).ready(function () {
-      $("button").click(function () {
-       
-          var div = $("#JQAnim");
-          div.animate({ left: '100px' }, "slow");
-          div.animate({ fontSize: '5em' }, "slow");
-        
-      });
-    });
+    // $(document).ready(function () {
+    //   $("button").click(function () {
+    //       var div = $("#JQAnim");
+    //       div.animate({ left: '100px' }, "slow");
+    //       div.animate({ fontSize: '5em' }, "slow");
+    //   });
+    // });
   }
 
 }
