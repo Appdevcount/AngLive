@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
-import {Department} from '../../models/department.model'
+import { Department } from '../../models/department.model'
 
 
 
@@ -21,7 +21,7 @@ export class CreateEmployeeComponent implements OnInit {
     { id: 3, name: 'IT' },
     { id: 4, name: 'Payroll' }
   ];
-  
+
 
   constructor() { }
 
