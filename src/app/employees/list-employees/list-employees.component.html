@@ -1,0 +1,74 @@
+<button>jQuery Usage Start Animation</button>
+
+<div id="JQAnim" style="border:1px solid #555;border-radius:3px;color:white;background:#555;height:105px;width:260px;position:relative; margin-top:10px">jQuery</div>
+
+
+<div  *ngFor="let employee of employees">
+<div class="row vertical-align">
+
+    <div class="col-xs-4 offset-xs-1">
+        <img class="imageClass" [src]="employee.photoPath" />
+    </div>
+    <div class="col-xs-7">
+
+        <div class="row">
+            <div class="col-xs-6">
+                Gender
+            </div>
+            <div class="col-xs-6">
+                : {{employee.gender}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Date of Birth
+            </div>
+            <div class="col-xs-6">
+                : {{employee.dateOfBirth | date}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Contact Preference
+            </div>
+            <div class="col-xs-6">
+                : {{employee.contactPreference}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Phone
+            </div>
+            <div class="col-xs-6">
+                : {{employee.phoneNumber}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Email
+            </div>
+            <div class="col-xs-6">
+                : {{employee.email}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Department
+            </div>
+            <div class="col-xs-6">
+                : {{employee.department}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-6">
+                Is Active
+            </div>
+            <div class="col-xs-6">
+                : {{employee.isActive}}
+            </div>
+        </div>
+
+    </div>
+
+</div> 
+</div>

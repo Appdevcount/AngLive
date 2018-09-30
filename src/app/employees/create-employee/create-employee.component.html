@@ -1,0 +1,109 @@
+<div class="container">
+
+    <div class="row  ">
+        <div class="offset-lg-3 col-lg-6 offset-lg-3 card bg-light ">
+            <form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+                <div class="CustomPaddingforForm">
+
+                    <h3 class="text-center">Create Employee</h3>
+
+
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="fullName">Full Name</label>
+                        <input id="fullName" type="text" class="form-control" name="fullName" [(ngModel)]="fullName">
+                    </div>
+
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <div class="form-control">
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" value="male" [(ngModel)]="gender"> Male
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" value="female" [(ngModel)]="gender"> Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Preference</label>
+                        <div class="form-control">
+                            <label class="radio-inline">
+                                <input type="radio" name="contactPreference" value="email" [(ngModel)]="contactPreference"> Email
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="contactPreference" value="phone" [(ngModel)]="contactPreference"> Phone
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="email">Email</label>
+                        <input id="email" type="text" class="form-control" name="email" [(ngModel)]="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input id="phoneNumber" type="text" class="form-control" name="phoneNumber" [(ngModel)]="phoneNumber">
+                    </div>
+                    <div class="form-control">
+                        <label class="checkbox-inline">
+                            <input type="checkbox" name="isActive" [(ngModel)]="isActive">Is Active
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <select id="department" name="department"
+                                [(ngModel)]="department" class="form-control">
+                                <option *ngFor="let dept of departments" [value]="dept.id">
+                                   {{ dept.name}}
+                                </option>
+                                <!-- ngFor is a structural directive there is an asterisk before it.
+                                Structural directives modify the DOM, i.e they add or remove the elements from DOM. -->
+                          <!-- <option value="1">Help Desk</option>
+                          <option value="2">HR</option>
+                          <option value="3">IT</option>
+                          <option value="4" disabled>Paroll</option> -->
+                        </select>
+                      </div>
+                    <button class="btn btn-primary" type="submit">Save</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <div class="row  ">
+        <div class="col text-center font-weight-bold JSONContentToBeautify">
+            Angular Generated Form Model :
+            <i class="text-primary"> {{employeeForm.value | json}}</i>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+<!-- JSON beautification reference files
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="beautify-json.css">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="jquery.beautify-json.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.JSONContentToBeautify').beautifyJSON({
+                type: "plain",
+                // highlight JSON on mouse hover
+                hoverable: true,
+                // make nested nodes collapsible
+                collapsible: true,
+                color: true
+
+            });
+           
+        });
+    </script> -->

@@ -1,0 +1,12 @@
+.imageClass {
+    width: 200px;
+    height: 200px;
+}
+
+
+/* To vertically align the content in div */
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
