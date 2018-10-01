@@ -6,7 +6,7 @@ import { Employee } from '../../models/employee.model';
 // // import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-list-employees',
+  selector: 'app-list-employees',// since routing is used , separate component selector is not required
   templateUrl: './list-employees.component.html',
   styleUrls: ['./list-employees.component.css']
 })

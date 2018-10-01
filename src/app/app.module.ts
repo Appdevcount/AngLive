@@ -16,7 +16,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ListEmployeesComponent } from './employees/list-employees/list-employees.component';
-// import { CreateEmployeeComponent } from './employees/create-employee/create-employee.component';
+import { CreateEmployeeComponent } from './employees/create-employee/create-employee.component';
 
 // Each route maps a URL path to a component
 // The 3rd route specifies the route to redirect to if the path
@@ -26,7 +26,7 @@ import { ListEmployeesComponent } from './employees/list-employees/list-employee
 // will set it to full as we want to do a full match.
 const appRoutes: Routes = [
   { path: 'list', component: ListEmployeesComponent },
-  // { path: 'create', component: CreateEmployeeComponent },
+  { path: 'create', component: CreateEmployeeComponent },
   { path: '', redirectTo: '/list', pathMatch: 'full' }
 ];
 
@@ -39,7 +39,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ListEmployeesComponent,
-    // CreateEmployeeComponent
+    CreateEmployeeComponent
   ],
   // Include RouterModule in the "imports" array of the @NgModule() decorator
   //Include FormsModule

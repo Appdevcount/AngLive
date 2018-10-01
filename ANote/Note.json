@@ -2,3 +2,10 @@ ng new AngularCrud --skip-tests true
 
 ng g c employees/listEmployees --spec false --flat true
 
+During development, if you want a different base path other than "/", simply execute the "ng serve" command with --base-href option set to your desired base path as shown below.
+ng serve -o --base-href /emp/
+
+if you want to deploy your application on a server on sub-folder called "emp", then you will have to remember to update the base href element value in index.html to "/emp/". There are 2 ways we can do this. 
+Manually update the index.html file OR
+Use the --base-href option along with the ng build command as shown below. This will update the "base href" element value index.html.
+ng build --base-href /emp/
